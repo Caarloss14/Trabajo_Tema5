@@ -6,9 +6,25 @@
     box-sizing: border-box;
     transition: background-color .3s, color .3s;
     font-family: "Inter", sans-serif;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 body {
-    background-color: black; 
+    background-color: black !important;
+}
+
+form {
+    background-color: rgb(22, 21, 21);
+    width: 400px;
+}
+
+input {
+    background-color: black !important;
+    border-color: #666 !important;
+}
+
+button {
+    background-color: white !important;
+    color: black !important;
+    border-color: #000000 !important;
 }
