@@ -13,9 +13,9 @@ if (isset($_POST["boton"])) {
 
         //Si la consulta es true, se ingresara a la pagina, si no mandara un echo
         if ($datos = $sql->fetch_object()) {
-            header("Location: index.php");
+            header("Location: formulario.php");
             exit();
-        } else {
+        }else {
             echo '<div class="form_input">Correo o contraseña incorrecta</div>';
         }
     }
@@ -38,17 +38,13 @@ if (isset($_POST["boton_registro"])) {
             //consulta en la base de datos de mysql
             $sql = $conexion->query("INSERT INTO users (email, password) VALUES ('$correo','$password')");
             //Si la consulta es true, se ingresara a la pagina, si no mandara un echo
-            if ($sql) {
-                header("Location: index.php");
-                exit();
-            } else {
+        if ($sql) {
+            header("Location: formulario.php");
+            exit();
+        }else {
                 echo '<div class="form_input"><p>Hubo un problema con el registro</p></div>';
         }
         }
-
-        
-
-        
     }
 }
 
