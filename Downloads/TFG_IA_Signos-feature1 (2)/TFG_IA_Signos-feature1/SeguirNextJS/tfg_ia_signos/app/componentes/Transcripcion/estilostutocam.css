@@ -1,0 +1,108 @@
+/*Colores*/
+:root {
+  --colorTextoBlanco: #ffffff;
+  --colorBlancoSuave: rgba(255, 255, 255, 0.2);
+  --colorTextoNegro: #000000;
+  --colorInicial: rgba(65, 128, 175, 0.3);
+  --colorSecond: #86D597;
+  --colorInicialOpaco: #153658;
+}
+.cam_Page {
+  color: white;
+}
+/* Contenedor general */
+.tutorial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Tarjetas */
+.tutorial_card {
+  background-color: rgb(15, 15, 120);
+  border-radius: 16px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.tutorial_card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.tutorial_card p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #dcdcff;
+}
+
+.tutorial_card img {
+  margin: 0 auto;
+  border-radius: 10px;
+}
+/* WEBCAM */
+.webcam_container {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom:1em;
+}
+
+.webcam {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 16px;
+}
+
+/*Contenedor transcripción*/
+
+.contenedor-transcripcion {
+  background-color: rgb(15, 15, 120);
+  padding: 30px;
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  min-height: 300px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+/*RESPONSIVE*/
+@media (max-width: 1024px) {
+  .tutorial {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tutorial {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .webcam_container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contenedor-transcripcion {
+    max-width: 100%;
+  }
+}
+

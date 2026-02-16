@@ -1,0 +1,12 @@
+:root{
+    --font-sciencegothic:'Science Gothic',sans-serif;
+}
+/*Deshabilitamos el scroll horizontal
+Aplicamos el tipo de letra
+Balanceamos el texto para que no salga desalineado*/
+html,body{
+overflow-x:hidden;
+font-family:var(--font-sciencegothic),sans-serif !important;
+text-wrap:balance;
+}
+

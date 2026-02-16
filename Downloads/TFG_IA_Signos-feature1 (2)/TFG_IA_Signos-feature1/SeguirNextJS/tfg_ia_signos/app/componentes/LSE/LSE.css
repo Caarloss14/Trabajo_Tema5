@@ -1,0 +1,31 @@
+/*Colores*/
+:root {
+    --colorTextoBlanco: #ffffff;
+    --colorBlancoSuave: rgba(255, 255, 255, 0.2);
+    --colorTextoNegro: #000000;
+    --colorInicial: rgba(65, 128, 175, 0.3);
+    --colorSecond: #86D597;
+    --colorInicialOpaco: #153658;
+}
+.foto_LSE{
+width: 50%;
+height: 20vh;
+object-fit: contain;
+}
+
+.seccion_LSE{
+min-height: 100vh;
+display: flex;
+justify-content: end;
+align-items: center;
+flex-direction: column;
+}
+
+.LSE_window {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    background-color: var(--colorInicial);
+    width: 100%;
+    padding: 3em
+}

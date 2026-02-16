@@ -1,0 +1,142 @@
+/*Colores*/
+:root {
+    --colorTextoBlanco: #ffffff;
+    --colorBlancoSuave: rgba(255, 255, 255, 0.2);
+    --colorTextoNegro: #000000;
+    --colorInicial: rgba(65, 128, 175, 0.3);
+    --colorSecond: #86D597;
+    --colorInicialOpaco: #153658;
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.inicio_registro{
+padding:0 !important ;
+position:relative !important;
+
+}
+
+.inicio_registro img{
+width: 100%;
+height: 100vh;
+object-fit: cover;
+background-color: var(--colorOscuroOpaco);
+}
+.formulario{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.contenido_registro h4{
+font-size:1.5em;
+}
+.contenido_registro p{
+font-size:1em;
+}
+
+.formulario h1{
+background-image: url("/Imagenes/Seccion_Registro/fondo.png");
+background-repeat: repeat-x;
+color: transparent;
+background-size: cover;
+background-clip: text;
+animation: animate 20s linear infinite;
+font-size: 3em !important;
+font-weight: 900;
+padding-bottom: 0.2em;
+}
+form input{
+margin-top: 1em;
+}
+
+.input-container{
+position: relative;
+}
+
+.input-container input{
+width: 100%;
+padding: 10px 20px;
+font-size: 16px;
+border: 3px solid var(--colorInicial);
+border-radius: 4px;
+outline: none;
+}
+.input-container label{
+position: absolute;
+left: 10px;
+top: 12px;
+color: #555;
+background: rgba(255, 255, 255, 0);
+font-size: 16px;
+pointer-events: none;
+transition: all 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown)+label{
+top: -12px;
+left: 10px;
+font-size: 12px;
+font-weight: 700;
+color: var(--colorTextoNegro);
+background: linear-gradient(135deg,var(--colorInicial),var(--colorSecundario));
+transform: scale(1.05);
+background: white;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+padding: 0 4px;
+transition: all 0.4s ease;
+}
+/*Botones de interaccion con el formulario*/
+.interaccion{
+display: flex;
+gap: 1em;
+margin-top: 1em;
+}
+
+.interaccion button{
+    width: 100%;
+    padding: 0.5em;
+    background-color: var(--colorOscuroOpaco);
+    color: var(--colorTextoBlanco);
+}
+
+.interaccion button:hover {
+    background-color: var(--colorOscuro);
+    color: var(--colorTextoBlanco);
+}
+
+
+
+@keyframes animate{
+to{
+background-position-x:-500px ;
+}
+}
+
+@media (min-width:1024px) {
+    .formulario h1{
+        font-size: 4em;
+    }
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px;
+}
+}
+
+
+@media (max-width:768px) {
+
+.inicio_registro img{
+width: 100%;
+height: 50vh; 
+}
+
+.formulario h1{
+font-size:2.5em !important;
+}
+}
